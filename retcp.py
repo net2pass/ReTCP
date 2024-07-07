@@ -16,7 +16,7 @@ def sniff_and_modify():
                         #print(packet)
                         packet.tcp.payload=b'RAHAHAHAHAHAAAAAAA'
                         packet.tcp.cksum=65521
-                        packet.tcp.ack_num=packet.tcp.ack_num+650022
+                        packet.tcp.ack_num=packet.tcp.ack_num+65022
                         w.send(packet,False)
                         print("[TCP Jailbreak]:",packet.dst_addr)
                         record[packet.src_port]=False
