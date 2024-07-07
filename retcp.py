@@ -19,6 +19,7 @@ def sniff_and_modify():
                         packet.tcp.ack_num=packet.tcp.ack_num+650022
                         w.send(packet,False)
                         print("[TCP Jailbreak]:",packet.dst_addr)
+                        record[packet.src_port]=False
                     # Okay.
                   
 sniff_and_modify()
